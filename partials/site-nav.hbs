@@ -1,0 +1,22 @@
+<nav class="site-nav">
+  {{^is "home"}}
+    <div class="site-nav-left">
+      <a class="site-nav-logo" href="{{@blog.url}}">
+        I'm rec <br />
+        full stack dev <br />
+        🔌
+      </a>
+    </div>
+    <div class="site-nav-right">
+      {{#if @blog.navigation}}
+          {{navigation}}
+      {{/if}}
+    </div>
+  {{else}}
+    <div class="site-nav-center">
+      {{#if @blog.navigation}}
+          {{navigation}}
+      {{/if}}
+    <div>
+  {{/is}}
+</nav>
